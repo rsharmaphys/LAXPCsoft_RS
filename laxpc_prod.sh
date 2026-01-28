@@ -45,12 +45,12 @@ printf "3 80\n3 30\n" > energyinput
 version='3.4.5'
 date='16Jan2025'
 
-printf "\n\n\n%%%%%%%%%% \t LAXPCSOFT version $version, Release Date $date\t%%%%%%%%%% \n \nThis script uses the package provided by TIFR, Mumbai \nOriginal package can be downloaded from \nhttps://www.tifr.res.in/~astrosat_laxpc/LaxpcSoft.html \n \n \nThis particular BASH script is written by :: Dr. Rahul Sharma \nAffiliation :: Raman Research Institute (RRI), Bangalore\ncontact :: rsharma@rri.res.in\n"
+printf "\n\n\n%%%%%%%%%% \t LAXPCSOFT version $version, Release Date $date\t%%%%%%%%%% \n \nThis script uses the package provided by TIFR, Mumbai \nOriginal package can be downloaded from \nhttps://www.tifr.res.in/~astrosat_laxpc/LaxpcSoft.html \n \n \nThis particular BASH script is written by :: Dr. Rahul Sharma \nAffiliation :: IUCAA, Pune \ncontact :: rahul.sharma@iucaa.in\n"
 
 printf "Date modified : 07-01-2026 \nversion - 1.5\n"
 
 
-printf "\n\n Disclaimer:\n This script does not have any warranty, please use this with caution. \n We are not responsible if you get correct results.\n If you find any bug, please report to rsharma@rri.res.in\n Also contact if need any help.\n Please acknowledge the LAXPC Payload Operation Centre (POC) at TIFR-Mumbai.\n"
+printf "\n\n Disclaimer:\n This script does not have any warranty, please use this with caution. \n We are not responsible if you get correct results.\n If you find any bug, please report to rahul.sharma@iucaa.in\n Also, contact if you need any help.\n Please acknowledge the LAXPC Payload Operation Centre (POC) at TIFR-Mumbai.\n"
 
 printf "\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n"
 
