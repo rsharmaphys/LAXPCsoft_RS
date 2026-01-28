@@ -1,19 +1,19 @@
 # !/bin/bash
-# This script will extract the LAXPC lightcurve and spectrum. It will also correct LCs for barycenter.
+# This script will extract the LAXPC lightcurve and spectrum. It will also correct LCs for the barycenter.
 
 #########################
 #v1.1 (01/07/2022): Extract of energy-resolved lightcurve
 #########################
-#v1.2 (06/07/2023): Updated with extraction of spectrum
+#v1.2 (06/07/2023): Updated with the extraction of spectrum
 #########################
 
 #########################
-#Issue: If observation is of Feb 2022, then background selection need to start with different date. 
+#Issue: If the observation is of Feb 2022, then the background selection needs to start with a different date. 
 #v1.3 (25/04/2025): Corrected the Updatation with back4.inp. Above issue is resolved now.
 #########################
 
 #########################
-#v1.4 (30/06/2025): Extract the event file by setting a varaible "event=1"
+#v1.4 (30/06/2025): Extract the event file by setting a variable "event=1"
 #########################
 
 #########################
@@ -23,10 +23,10 @@
 inlxp=2			# 1 for LAXPC 10 and 2 for LAXPC 20 instrument
 anode=0    		# 1 = Top layer data only, 0 = all layers
 bin=1			# Bin size of light curve
-event=0			# 1 - to extract event file and bary-correct it, otherwise it will not extract
+event=0			# 1 - to extract the event file and bary-correct it, otherwise it will not extract
 
 #Note
-#set the path to the input directory (indir) and output directory (outdir). Please give path in $indir up to level 1 data from home; e.g., /home/user/laxpcdata/
+#set the path to the input directory (indir) and output directory (outdir). Please give the path in $indir up to level 1 data from home; e.g., /home/user/laxpcdata/
 # obsid is the observation id (the last 4-5 digit, e.g., for obs-ID = 9000005318 give obsid=5318
 
 source='SAXJ1808'
@@ -36,7 +36,7 @@ outdir=/home/rahulsharma/Downloads/SAXJ1808/2022_ASTROSAT/LAXPC/$obsid
 ra=272.115195833
 dec=-36.978861111
 
-# For energy-resolved light curves, either create a file named energyinput with each line representing a range of energy or edit the line below with energy range seperated by \n
+# For energy-resolved light curves, either create a file named energyinput with each line representing a range of energy or edit the line below with energy range separated by \n
 printf "3 80\n3 30\n" > energyinput
 
 #############################################################
@@ -64,7 +64,7 @@ cd laxpcsoft
 
 printf "\n\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n"
 
-#echo "please give the path to the level-1 input directory :"
+#echo "Please give the path to the level-1 input directory :"
 #echo "(give path upto level 1 data from home; e.g., /home/user/laxpcdata/)"
 #read -p 'path to input directory :' indir
 
@@ -125,7 +125,7 @@ cat energyinput
 echo " "
 
 
-# Extracting the product for selected LAXPC20 detector
+# Extracting the product for the selected LAXPC20 detector
 
 if [[ $inlxp == 2 ]] 
 then 
@@ -148,7 +148,7 @@ if [ -n "$bkg" ]; then
 
     echo "The selected epoch of background is $bkg"
 else
-    echo "Background epoch was not upated and already mentioned used"
+    echo "Background epoch was not updated and already mentioned used"
     cat back4.inp | head -1
 fi
 
