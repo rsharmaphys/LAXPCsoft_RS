@@ -31,28 +31,32 @@ Clone the repository:
 ```bash
 git clone https://github.com/rsharmaphys/LAXPCsoft_RS.git
 cd LAXPCsoft_RS
+```
 
 Installation
 
 Before installation, ensure that HEASOFT is correctly initialized in your shell environment.
 
 Then run:
-
+```bash
 bash install-lxp.sh
+```
 
 Usage
 
 To extract spectra and energy-resolved light curves, execute:
-
+```bash
 bash laxpc_prod.sh
-
+```
 Before running the script, make sure the following parameters are correctly set inside laxpc_prod.sh:
 
-    obsid : Observation ID
+    obsid : Observation ID (the last 4-5 digit, e.g., for obs-ID = 9000005318 give obsid=5318)
 
-    indir : Input directory containing LAXPC data
+    indir : Input directory containing LAXPC data (full path upto level 1 data)
+    ├── data/
+    │   └── <obsid>/
 
-    outdir : Output directory
+    outdir : Output directory (full path)
 
     ra : Right Ascension of the source (in decimal degrees)
 
@@ -79,7 +83,7 @@ After downloading, place the *.tar.gz RMF files either:
 
     in the LAXPCsoft_RS directory, or
 
-    in the directory containing the downloaded LAXPC data packages
+    in the directory containing the downloaded LAXPC packages
 
 Example Directory Structure
 
@@ -88,11 +92,7 @@ LAXPCsoft_RS/
 ├── laxpc_prod.sh
 ├── lx10resp.tar.gz
 ├── lx20resp.tar.gz
-├── data/
-│   └── <obsid>/
-│       └── LAXPC/
-└── output/
-    └── <obsid>/
+├── *.tar.gz
 
 Notes
 
