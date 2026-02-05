@@ -32,17 +32,35 @@ Clone the repository:
 git clone https://github.com/rsharmaphys/LAXPCsoft_RS.git
 cd LAXPCsoft_RS
 ```
+Response Matrix Files (RMFs) for LAXPC10 and LAXPC20 must be downloaded separately.
 
-Installation
+Official LAXPC software page: https://www.tifr.res.in/~astrosat_laxpc/LaxpcSoft.html
 
-Before installation, ensure that HEASOFT is correctly initialized in your shell environment.
+Direct download links:
+LAXPC10: https://www.tifr.res.in/~astrosat_laxpc/LaxpcSoft_v1.0/lx10resp.tar.gz
+LAXPC20: https://www.tifr.res.in/~astrosat_laxpc/LaxpcSoft_v1.0/lx20resp.tar.gz
+
+After downloading, place the *.tar.gz RMF files either in the LAXPCsoft_RS directory, or in the directory containing the downloaded LAXPC packages
+
+Example Directory Structure
+
+    LAXPCsoft_RS/
+        ├── install-lxp.sh
+        ├── laxpc_prod.sh
+        ├── lx10resp.tar.gz
+        ├── lx20resp.tar.gz
+        ├── *.tar.gz
+
+##Installation
+
+Before installation, please make sure that HEASOFT is correctly initialized in your shell environment.
 
 Then run:
 ```bash
 bash install-lxp.sh
 ```
 
-Usage
+##Usage
 
 To extract spectra and energy-resolved light curves, execute:
 ```bash
@@ -63,52 +81,10 @@ Before running the script, make sure the following parameters are correctly set 
     dec : Declination of the source (in decimal degrees)
 
 The script produces background-subtracted products and applies barycentric correction where required.
-Response Files (RMF)
 
-Response Matrix Files (RMFs) for LAXPC10 and LAXPC20 must be downloaded separately.
 
-Official LAXPC software page:
+**Notes**
 
-https://www.tifr.res.in/~astrosat_laxpc/LaxpcSoft.html
+    This package is provided for scientific and academic use.
+    No warranty is implied. Users should verify the extracted products before scientific analysis.
 
-Direct download links:
-
-    LAXPC10 RMF
-    https://www.tifr.res.in/~astrosat_laxpc/LaxpcSoft_v1.0/lx10resp.tar.gz
-
-    LAXPC20 RMF
-    https://www.tifr.res.in/~astrosat_laxpc/LaxpcSoft_v1.0/lx20resp.tar.gz
-
-After downloading, place the *.tar.gz RMF files either:
-
-    in the LAXPCsoft_RS directory, or
-
-    in the directory containing the downloaded LAXPC packages
-
-Example Directory Structure
-
-LAXPCsoft_RS/
-├── install-lxp.sh
-├── laxpc_prod.sh
-├── lx10resp.tar.gz
-├── lx20resp.tar.gz
-├── *.tar.gz
-
-Notes
-
-    HEASOFT must be initialized every time before running the scripts.
-
-    RA and DEC must be provided in decimal degrees.
-
-    Users should verify the extracted products before scientific analysis.
-
-Citation
-
-If you use this package in a publication, please cite it appropriately and acknowledge the AstroSat/LAXPC instrument team.
-Author
-
-Rahul Sharma
-License
-
-This package is provided for scientific and academic use.
-No warranty is implied.
