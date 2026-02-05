@@ -18,6 +18,7 @@
 
 #########################
 #v1.5 (07/01/2026): Minor tweaks
+#     (05/02/2026): corrected fdump energy reading
 #########################
 
 inlxp=2			# 1 for LAXPC 10 and 2 for LAXPC 20 instrument
