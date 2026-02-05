@@ -169,7 +169,7 @@ cp ../rmf/$rmf .
 
 echo "The rmf file used is $rmf"
 
-fdump $rmf[1] $rmf.txt - - prhead=no showrow=no
+fdump $rmf[1] $rmf.txt - - prhead=no showrow=no showcol=no showunit=no
 awk '{print $1" "($2+$3)/2" "($2-$3)/2}' $rmf.txt > ${rmf}_2.txt
 
 
@@ -266,7 +266,7 @@ cp ../rmf/$rmf .
 
 echo "The rmf file used is $rmf"
 
-fdump $rmf[1] $rmf.txt - - prhead=no showrow=no
+fdump $rmf[1] $rmf.txt - - prhead=no showrow=no showcol=no showunit=no
 awk '{print $1" "($2+$3)/2" "($2-$3)/2}' $rmf.txt > ${rmf}_2.txt
 
 
@@ -357,7 +357,7 @@ cp ../rmf/$rmf .
 
 echo "The rmf file used is $rmf"
 
-fdump $rmf[1] $rmf.txt - - prhead=no showrow=no
+fdump $rmf[1] $rmf.txt - - prhead=no showrow=no showcol=no showunit=no
 awk '{print $1" "($2+$3)/2" "($2-$3)/2}' $rmf.txt > ${rmf}_2.txt
 
 for ((i=1;i<=$en;i++))
@@ -410,7 +410,7 @@ cp ../rmf/$rmf .
 
 echo "The rmf file used is $rmf"
 
-fdump $rmf[1] $rmf.txt - - prhead=no showrow=no
+fdump $rmf[1] $rmf.txt - - prhead=no showrow=no showcol=no showunit=no
 awk '{print $1" "($2+$3)/2" "($2-$3)/2}' $rmf.txt > ${rmf}_2.txt
 
 for ((i=1;i<=$en;i++))
