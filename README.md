@@ -51,7 +51,7 @@ Example Directory Structure
         ├── lx20resp.tar.gz
         ├── *.tar.gz
 
-##Installation
+## Installation
 
 Before installation, please make sure that HEASOFT is correctly initialized in your shell environment.
 
@@ -60,7 +60,7 @@ Then run:
 bash install-lxp.sh
 ```
 
-##Usage
+## Usage
 
 To extract spectra and energy-resolved light curves, execute:
 ```bash
